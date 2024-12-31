@@ -52,6 +52,7 @@ form input {
     margin-bottom: 1rem;
     border: 1px solid #ccc;
     border-radius: 5px;
+    background-color: #fff;
 }
 
 .toggle-options {
