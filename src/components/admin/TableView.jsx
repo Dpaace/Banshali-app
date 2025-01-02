@@ -3,6 +3,7 @@
 const TableView = () => {
   const data = [
     {
+      profile_image: "/src/assets/admin/images/man_sample_1.jpg",
       name: "Arlene McCoy",
       generation: "G1",
       mother: "Barbara Gordon",
@@ -11,11 +12,19 @@ const TableView = () => {
       dob: "5/27/15",
     },
     // Add more rows here
+    {
+      profile_image: "/src/assets/admin/images/man_sample_1.jpg",
+      name: "Arlene McCoy",
+      generation: "G1",
+      mother: "Barbara Gordon",
+      father: "Tony Stark",
+      gender: "M",
+      dob: "5/27/15",
+    },
   ];
 
   return (
     <div className="table-view">
-      
       <table>
         <thead>
           <tr>
@@ -31,7 +40,14 @@ const TableView = () => {
         <tbody>
           {data.map((row, index) => (
             <tr key={index}>
-              <td>{row.name}</td>
+              <td>
+                <img
+                  // className="profile-image"
+                  src={row.profile_image}
+                  alt="Profile"
+                />
+                {row.name}
+              </td>
               <td>{row.generation}</td>
               <td>{row.mother}</td>
               <td>{row.father}</td>
