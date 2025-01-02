@@ -1,17 +1,80 @@
-import React from "react";
+// import { useState } from "react";
+import "./../../assets/admin/styles/AdminDashboard.css";
+import PropTypes from 'prop-types';
 
-const Header = () => {
+import { FaBell } from "react-icons/fa";
+
+const Header = ({ view, setView }) => {
+  // const [view, setView] = useState("Card View");
   return (
     <div className="header">
-      <div className="header-left">
-        <button>Card View</button>
-      </div>
       <div className="header-right">
-        <button className="filter-button">Filter</button>
-        <button className="add-button">+ Add New</button>
+        {/* Notification Bell */}
+        <FaBell className="notification-icon" />
+
+        {/* Profile Image */}
+        <img
+          className="profile-image"
+          src="/src/assets/admin/images/man_sample_1.jpg"
+          alt="Profile"
+        />
+
+        {/* Dropdown Button */}
+        <div className="view-selector">
+          <select
+            value={view}
+            onChange={(e) => setView(e.target.value)}
+            className="view-dropdown"
+          >
+            <option value="Card View">Card View</option>
+            <option value="Table View">Table View</option>
+          </select>
+        </div>
       </div>
     </div>
   );
 };
 
+Header.propTypes = {
+  view: PropTypes.string.isRequired,
+  setView: PropTypes.func.isRequired,
+};
+
 export default Header;
+
+
+
+
+
+
+// const Header = () => {
+//   const [view, setView] = useState("Card View");
+
+//   return (
+//     <div className="header">
+//       <div className="header-right">
+//         {/* Notification Bell */}
+//         <FaBell className="notification-icon" />
+
+//         {/* Profile Image */}
+//         <img className="profile-image" src="/src/assets/admin/images/man_sample_1.jpg" alt="Profile" />
+
+//         {/* Dropdown Button */}
+//         <div className="view-selector">
+//           <select
+//             value={view}
+//             onChange={(e) => setView(e.target.value)}
+//             className="view-dropdown"
+//           >
+//             <option value="Card View">Card View</option>
+//             <option value="Table View">Table View</option>
+//           </select>
+//         </div>
+//       </div>
+//       <div className="header-right">
+//         <button className="filter-button">Filter</button>
+//         <button className="add-button">+ Add New</button>
+//       </div>
+//     </div>
+//   );
+// };

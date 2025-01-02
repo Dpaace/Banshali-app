@@ -1,4 +1,4 @@
-import React from "react";
+// import React from "react";
 
 const TableView = () => {
   const data = [
@@ -15,13 +15,14 @@ const TableView = () => {
 
   return (
     <div className="table-view">
+      
       <table>
         <thead>
           <tr>
             <th>Name</th>
             <th>Generation</th>
-            <th>Mother's name</th>
-            <th>Father's name</th>
+            <th>Mother&apos;s name</th>
+            <th>Father&apos;s name</th>
             <th>Gender</th>
             <th>DOB</th>
             <th>Info</th>
