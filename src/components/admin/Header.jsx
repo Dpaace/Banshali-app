@@ -71,10 +71,6 @@ export default Header;
 //           </select>
 //         </div>
 //       </div>
-//       <div className="header-right">
-//         <button className="filter-button">Filter</button>
-//         <button className="add-button">+ Add New</button>
-//       </div>
 //     </div>
 //   );
 // };

@@ -89,19 +89,28 @@
   border-color: #5b2d8f;
 }
 
+.table-view-filters {
+  display: flex;
+  gap: 1rem;
+  justify-content: flex-end;
+  padding: 1rem 0;
+}
 
 
-/* .header-right button {
-  margin-left: 1rem;
+.table-view-filters button {
+  /* margin-left: 1rem; */
   border: none;
   padding: 0.5rem 1rem;
   cursor: pointer;
-} */
-
+  border-radius: 5px;
+  border: 1px solid #000;
+  color: #000;
+}
 
 
 .filter-button {
-  background-color: #ddd;
+  background-color: rgb(164, 85, 164)
+
 }
 
 .add-button {
@@ -176,7 +185,32 @@ table tr:last-child {
   margin: 0 1rem;
 }
 
+.icon-button {
+  background: none;
+  border: none;
+  cursor: pointer;
+  font-size: 1.2rem;
+  margin-right: 0.5rem;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+}
 
+.info-button {
+  color: #0078d4;
+}
+
+.edit-button {
+  color: #28a745;
+}
+
+.delete-button {
+  color: #dc3545;
+}
+
+.icon-button:hover {
+  opacity: 0.8;
+}
 
 
 .card-view-placeholder {
@@ -187,4 +221,57 @@ table tr:last-child {
   background-color: #f9f9f9;
   border: 1px dashed #ccc;
   border-radius: 5px;
+}
+
+
+
+.search-bar {
+  display: flex;
+  align-items: center;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  padding: 0.5rem;
+  background-color: #fff;
+  width: 300px;
+}
+
+.search-icon {
+  font-size: 1rem;
+  color: #aaa;
+  margin-right: 0.5rem;
+}
+
+.search-input {
+  border: none;
+  outline: none;
+  background-color: #fff;
+  width: 100%;
+  font-size: 1rem;
+  color: #333;
+}
+
+.search-input::placeholder {
+  color: #aaa;
+}
+
+.filter-button {
+  padding: 0.5rem 1rem;
+  background-color: #ddd;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+}
+
+.add-button {
+  padding: 0.5rem 1rem;
+  background-color: #28a745;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+}
+
+.filter-button:hover,
+.add-button:hover {
+  opacity: 0.9;
 }
