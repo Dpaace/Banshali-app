@@ -1,12 +1,8 @@
-.card-view {
+/* .card-view {
     display: flex;
     justify-content: center;
     align-items: center;
-    /* height: 100lvh; */
-    /* Full viewport height */
-    /* background-color: #f9f9f9; */
     overflow: hidden;
-    /* Prevent scrollbars */
 }
 
 .card {
@@ -53,4 +49,103 @@
     font-size: 1.2rem;
     margin-top: 0.5rem;
     cursor: pointer;
+}
+ */
+
+ .card-view {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    height: 80%;
+    width: 400px;
+}
+
+
+/* .card-view {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 400px;
+    height: 600px;
+    overflow: hidden;
+    background-color: red;
+} */
+
+.card-container {
+    display: flex;
+    /* Arrange cards horizontally */
+    width: 100%;
+    /* Full container width */
+    height: 100%;
+    /* Full container height */
+}
+
+.card {
+    min-width: 100%;
+    /* One card takes full viewport width */
+    height: 100%;
+    /* Full viewport height */
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    background-color: white;
+    border-radius: 16px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    overflow: hidden;
+    /* padding: 16px; */
+}
+
+.card-image {
+    width: 80%;
+    height: 60%;
+    object-fit: cover;
+    border-radius: 16px;
+}
+
+.card-content {
+    text-align: center;
+    padding: 16px;
+}
+
+.generate-family-tree {
+    background-color: #6a4ce8;
+    color: white;
+    border: none;
+    padding: 8px 16px;
+    border-radius: 20px;
+    cursor: pointer;
+    margin-bottom: 12px;
+    font-size: 14px;
+}
+
+.generate-family-tree:hover {
+    background-color: #5436c7;
+}
+
+.card-title {
+    font-size: 20px;
+    font-weight: bold;
+    margin: 8px 0;
+}
+
+.card-subtitle {
+    color: #6c6c6c;
+    font-size: 14px;
+    margin-bottom: 16px;
+}
+
+.info-button {
+    background: none;
+    border: none;
+    font-size: 20px;
+    cursor: pointer;
+    color: #6c6c6c;
+}
+
+.info-button:hover {
+    color: #333;
 }

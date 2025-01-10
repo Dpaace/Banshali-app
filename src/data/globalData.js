@@ -1,7 +1,7 @@
 export const globalData = [
     {
         profile_image: "/src/assets/images/man_sample_1.jpg",
-        name: "Arlene McCoy",
+        name: "Sample Data 1",
         generation: "G1",
         mother: "Barbara Gordon",
         father: "Tony Stark",
@@ -11,7 +11,7 @@ export const globalData = [
     // Add more rows here
     {
         profile_image: "/src/assets/images/man_sample_1.jpg",
-        name: "Arlene McCoy",
+        name: "Sample Data 2",
         generation: "G2",
         mother: "Barbara Gordon",
         father: "Tony Stark",
@@ -20,7 +20,7 @@ export const globalData = [
     },
     {
         profile_image: "/src/assets/images/man_sample_1.jpg",
-        name: "Arlene McCoy",
+        name: "Sample Data 3",
         generation: "G3",
         mother: "Barbara Gordon",
         father: "Tony Stark",
@@ -29,7 +29,7 @@ export const globalData = [
     },
     {
         profile_image: "/src/assets/images/man_sample_1.jpg",
-        name: "Arlene McCoy",
+        name: "Sample Data 4",
         generation: "G4",
         mother: "Barbara Gordon",
         father: "Tony Stark",
@@ -38,7 +38,7 @@ export const globalData = [
     },
     {
         profile_image: "/src/assets/images/man_sample_1.jpg",
-        name: "Arlene McCoy",
+        name: "Sample Data 5",
         generation: "G5",
         mother: "Barbara Gordon",
         father: "Tony Stark",
