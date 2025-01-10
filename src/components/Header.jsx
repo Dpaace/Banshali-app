@@ -15,7 +15,7 @@ const Header = ({ view, setView }) => {
         {/* Profile Image */}
         <img
           className="profile-image"
-          src="/src/assets/images/man_sample_1.jpg"
+          src="/src/assets/images/sample_1.jpg"
           alt="Profile"
         />
 

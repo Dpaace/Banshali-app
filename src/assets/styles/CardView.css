@@ -52,7 +52,7 @@
 }
  */
 
- .card-view {
+/* .card-view {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -69,31 +69,15 @@
 }
 
 
-/* .card-view {
-    position: relative;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    width: 400px;
-    height: 600px;
-    overflow: hidden;
-    background-color: red;
-} */
-
 .card-container {
     display: flex;
-    /* Arrange cards horizontally */
     width: 100%;
-    /* Full container width */
     height: 100%;
-    /* Full container height */
 }
 
 .card {
     min-width: 100%;
-    /* One card takes full viewport width */
     height: 100%;
-    /* Full viewport height */
     display: flex;
     flex-direction: column;
     justify-content: space-between;
@@ -102,7 +86,6 @@
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
     text-align: center;
     overflow: hidden;
-    /* padding: 16px; */
 }
 
 .card-image {
@@ -154,4 +137,110 @@
 
 .info-button:hover {
     color: #333;
+} */
+
+.card-view {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    height: 80%;
+    width: 400px;
+}
+
+@media (max-width: 768px) {
+    .card-view {
+        height: 100%;
+        width: 100%;
+    }
+}
+
+.card-container {
+    display: flex;
+    width: 100%;
+    height: 100%;
+}
+
+.card {
+    position: relative;
+    /* Reference point for absolutely positioned elements */
+    min-width: 100%;
+    /* Ensure each card takes up the full width */
+    height: 100%;
+    /* Ensure the card takes the full height */
+    overflow: hidden;
+    /* Hide any overflow content */
+}
+
+/* The image will fill the entire card */
+.card-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    /* Ensures the image covers the card without distortion */
+}
+
+/* The content is overlaid on top of the image */
+.card-content {
+    position: absolute;
+    /* Position the content relative to the card */
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    /* Position other content at the bottom */
+    align-items: start;
+    padding: 16px;
+    background: linear-gradient(to top,
+            rgba(0, 0, 0, 0.9),
+            rgba(0, 0, 0, 0.2),
+            rgba(0, 0, 0, 0));
+    /* Add a gradient overlay for better readability */
+    color: white;
+    text-align: center;
+    z-index: 2;
+}
+
+/* Button positioned at the top-left corner */
+.generate-family-tree {
+    position: absolute;
+    /* Position the button relative to the card */
+    top: 16px;
+    /* Add spacing from the top */
+    left: 16px;
+    /* Add spacing from the left */
+    background-color: #4a2373ab;
+    /* Semi-transparent white */
+    color: #fff;
+    /* Button text color */
+    border: none;
+    padding: 8px 16px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 14px;
+    z-index: 3;
+    /* Ensure it appears above other content */
+}
+
+.generate-family-tree:hover {
+    background-color: rgba(255, 255, 255, 1);
+    color: #5436c7;
+}
+
+.card-title {
+    font-size: 24px;
+    font-weight: bold;
+    margin: 60px 30px;
+    z-index: 3;
+}
+
+.card-subtitle {
+    font-size: 16px;
+    margin-bottom: 12px;
+    z-index: 3;
+    color: rgba(255, 255, 255, 0.8);
+    /* Slightly transparent text */
 }

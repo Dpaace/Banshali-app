@@ -234,7 +234,7 @@ const CardView = () => {
       onTouchStart={handleTouchStart} // Mobile touch start
       onTouchEnd={handleTouchEnd} // Mobile touch end
     >
-      <div
+      {/* <div
         className="card-container"
         style={{
           transform: `translateX(${-currentIndex * 100}%)`,
@@ -260,7 +260,33 @@ const CardView = () => {
             </div>
           </div>
         ))}
+      </div> */}
+      <div
+        className="card-container"
+        style={{
+          transform: `translateX(${-currentIndex * 100}%)`,
+          transition: "transform 0.5s ease-in-out",
+        }}
+      >
+        {globalData.map((item, index) => (
+          <div key={index} className="card">
+            {/* The image fills the card completely */}
+            <img
+              src={item.profile_image}
+              alt={item.name}
+              className="card-image"
+            />
+            {/* The content (text and buttons) overlays the image */}
+            <div className="card-content">
+              <button className="generate-family-tree">Generate Family Tree</button>
+              <h2 className="card-title">{item.name}</h2>
+              <p className="card-subtitle">{item.pustaNumber}</p>
+            </div>
+          </div>
+        ))}
       </div>
+
+
     </div>
   );
 };

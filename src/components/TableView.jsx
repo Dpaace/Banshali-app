@@ -13,7 +13,7 @@ const TableView = () => {
 
   const [currentPage, setCurrentPage] = useState(0);
   // const rowsPerPage = 10;
-  const [rowsPerPage, setRowsPerPage] = useState(10);
+  const [rowsPerPage, setRowsPerPage] = useState(1);
 
 
   // Calculate the rows for the current page
