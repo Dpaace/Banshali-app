@@ -61,6 +61,13 @@
     width: 400px;
 }
 
+@media (max-width: 768px) {
+    .card-view {
+        height: 100%;
+        width: 100%;
+    }
+}
+
 
 /* .card-view {
     position: relative;
@@ -92,7 +99,6 @@
     justify-content: space-between;
     align-items: center;
     background-color: white;
-    border-radius: 16px;
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
     text-align: center;
     overflow: hidden;

@@ -1,16 +1,13 @@
 /* Overall layout */
-.admin-dashboard {
+/* .admin-dashboard {
   display: flex;
   height: 100vh;
-  /* height: 100%; */
-  /* padding: 1rem; */
 }
 
 .admin-dashboard-content {
   flex: 1;
   display: flex;
   flex-direction: column;
-  /* background-color: blue; */
   height: 100%;
 }
 
@@ -20,9 +17,70 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  /* background-color: red; */
 
+} */
+
+/* Admin Dashboard Container */
+.admin-dashboard {
+  display: flex;
+  height: 100vh;
+  /* Full viewport height */
 }
+
+/* Content Section */
+.admin-dashboard-content {
+  flex: 1;
+  /* Take remaining space */
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  /* Full height */
+}
+
+/* View Section (Card/Table) */
+.dashboard-view {
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  /* align-items: center; */
+}
+
+/* Add this class to conditionally center items for CardView */
+.card-view-centered {
+  align-items: center; /* Only applies when CardView is selected */
+}
+
+/* Mobile Styles */
+@media (max-width: 768px) {
+  .admin-dashboard {
+    flex-direction: column;
+    /* Stack Sidebar and Content vertically */
+  }
+
+  .sidebar {
+    display: none;
+    /* Hide Sidebar */
+  }
+
+  .admin-dashboard-content {
+    width: 100%;
+    /* Full width for content */
+    height: auto;
+    /* Adjust height */
+  }
+
+  .dashboard-view {
+    flex: 1;
+    height: auto;
+    /* Adjust height for mobile */
+    width: 100%;
+    /* Full width for Card View */
+    /* padding: 16px; */
+    /* Add some padding */
+  }
+}
+
+
 
 /* Sidebar styling */
 .sidebar {
@@ -133,5 +191,3 @@
   background-color: #28a745;
   color: white;
 }
-
-
