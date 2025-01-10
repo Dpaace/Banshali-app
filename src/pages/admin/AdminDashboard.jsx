@@ -19,7 +19,7 @@ import "./../../assets/styles/AdminDashboard.css";
 
 
 const AdminDashboard = () => {
-  const [view, setView] = useState("Table View"); // Default to Table View
+  const [view, setView] = useState("Card View"); // Default to Table View
 
   return (
     <div className="admin-dashboard">
@@ -27,6 +27,7 @@ const AdminDashboard = () => {
       <div className="admin-dashboard-content">
         <Header view={view} setView={setView} /> {/* Pass state as props */}
         <div className="dashboard-view">
+        {/* dsf */}
         {view === "Table View" ? <TableView /> : <CardView />}
           {/* {view === "Table View" ? (
             <TableView />

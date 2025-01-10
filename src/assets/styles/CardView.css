@@ -2,9 +2,9 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 100vh;
+    /* height: 100lvh; */
     /* Full viewport height */
-    background-color: #f9f9f9;
+    /* background-color: #f9f9f9; */
     overflow: hidden;
     /* Prevent scrollbars */
 }
@@ -18,8 +18,9 @@
     overflow: hidden;
     text-align: center;
     position: relative;
-    transition: transform 0.5s ease, opacity 0.5s ease;
-    /* Smooth transition */
+    transform: scale(1);
+    transition: transform 0.3s ease, opacity 0.3s ease;
+    opacity: 1;
 }
 
 .card-image {

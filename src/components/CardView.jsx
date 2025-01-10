@@ -5,31 +5,31 @@ import { useState, useEffect } from "react";
 import { FaInfoCircle } from "react-icons/fa";
 import { globalData } from "../data/globalData";
 import "./../assets/styles/CardView.css";
-
 const CardView = () => {
   const [currentIndex, setCurrentIndex] = useState(0);
+  const totalCards = globalData.length;
 
-  // Handle mouse wheel scroll
+  // Handle scroll to navigate cards
   const handleScroll = (event) => {
     if (event.deltaY > 0) {
-      // Scroll down
-      setCurrentIndex((prevIndex) => (prevIndex + 1) % globalData.length);
+      // Scrolling down, show the next card
+      setCurrentIndex((prevIndex) => (prevIndex + 1) % totalCards);
     } else if (event.deltaY < 0) {
-      // Scroll up
+      // Scrolling up, show the previous card
       setCurrentIndex((prevIndex) =>
-        prevIndex === 0 ? globalData.length - 1 : prevIndex - 1
+        prevIndex === 0 ? totalCards - 1 : prevIndex - 1
       );
     }
   };
 
   useEffect(() => {
-    // Attach the scroll event listener
+    // Attach the scroll event listener to the window
     window.addEventListener("wheel", handleScroll);
     return () => {
-      // Cleanup the event listener
+      // Clean up the event listener when the component unmounts
       window.removeEventListener("wheel", handleScroll);
     };
-  }, []);
+  }, [totalCards]);
 
   return (
     <div className="card-view">
