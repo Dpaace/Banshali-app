@@ -1,5 +1,4 @@
-// import React from "react";
-import "./../../assets/admin/styles/AdminDashboard.css";
+import "./../assets/styles/AdminDashboard.css";
 
 const Sidebar = () => {
   return (

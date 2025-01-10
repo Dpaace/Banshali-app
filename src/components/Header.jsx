@@ -1,5 +1,5 @@
 // import { useState } from "react";
-import "./../../assets/admin/styles/AdminDashboard.css";
+import "../assets/styles/AdminDashboard.css";
 import PropTypes from 'prop-types';
 
 import { FaBell } from "react-icons/fa";
@@ -15,7 +15,7 @@ const Header = ({ view, setView }) => {
         {/* Profile Image */}
         <img
           className="profile-image"
-          src="/src/assets/admin/images/man_sample_1.jpg"
+          src="/src/assets/images/man_sample_1.jpg"
           alt="Profile"
         />
 

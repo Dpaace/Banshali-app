@@ -1,0 +1,48 @@
+export const globalData = [
+    {
+        profile_image: "/src/assets/images/man_sample_1.jpg",
+        name: "Arlene McCoy",
+        generation: "G1",
+        mother: "Barbara Gordon",
+        father: "Tony Stark",
+        gender: "M",
+        dob: "5/27/15",
+    },
+    // Add more rows here
+    {
+        profile_image: "/src/assets/images/man_sample_1.jpg",
+        name: "Arlene McCoy",
+        generation: "G2",
+        mother: "Barbara Gordon",
+        father: "Tony Stark",
+        gender: "M",
+        dob: "5/27/15",
+    },
+    {
+        profile_image: "/src/assets/images/man_sample_1.jpg",
+        name: "Arlene McCoy",
+        generation: "G3",
+        mother: "Barbara Gordon",
+        father: "Tony Stark",
+        gender: "M",
+        dob: "5/27/15",
+    },
+    {
+        profile_image: "/src/assets/images/man_sample_1.jpg",
+        name: "Arlene McCoy",
+        generation: "G4",
+        mother: "Barbara Gordon",
+        father: "Tony Stark",
+        gender: "M",
+        dob: "5/27/15",
+    },
+    {
+        profile_image: "/src/assets/images/man_sample_1.jpg",
+        name: "Arlene McCoy",
+        generation: "G5",
+        mother: "Barbara Gordon",
+        father: "Tony Stark",
+        gender: "M",
+        dob: "5/27/15",
+    },
+];

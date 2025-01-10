@@ -1,0 +1,120 @@
+/* Overall layout */
+.admin-dashboard {
+  display: flex;
+  height: 100vh;
+}
+
+.admin-dashboard-content {
+  flex: 1;
+  /* padding: 1rem; */
+}
+
+/* Sidebar styling */
+.sidebar {
+  width: 250px;
+  background-color: rgb(225, 225, 225);
+  color: white;
+  padding: 1rem;
+}
+
+.sidebar h2 {
+  margin-bottom: 1rem;
+  color: #000;
+  font-size: 40px;
+}
+
+.sidebar ul {
+  list-style: none;
+  padding: 0;
+}
+
+.sidebar ul li {
+  padding: 1rem;
+  cursor: pointer;
+  border-radius: 5px;
+}
+
+.sidebar ul li.active {
+  background-color: #4a2373;
+}
+
+/* Header styling */
+
+.header {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  padding: 1rem 10rem;
+  border-bottom: 1px solid #ddd;
+}
+
+.header-right {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.notification-icon {
+  font-size: 1rem;
+  cursor: pointer;
+  padding: 0.3rem;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  background-color: #f9f9f9;
+}
+
+.profile-image {
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+.view-selector {
+  display: flex;
+  align-items: center;
+}
+
+.view-dropdown {
+  padding: 0.5rem;
+  border: none;
+  /* border-radius: 5px; */
+  background: none;
+  color: #000;
+  cursor: pointer;
+}
+
+.view-dropdown:focus {
+  outline: none;
+  border-color: #5b2d8f;
+}
+
+.table-view-filters {
+  display: flex;
+  gap: 1rem;
+  justify-content: flex-end;
+  padding: 1rem 0;
+}
+
+
+.table-view-filters button {
+  /* margin-left: 1rem; */
+  border: none;
+  padding: 0.5rem 1rem;
+  cursor: pointer;
+  border-radius: 5px;
+  border: 1px solid #000;
+  color: #000;
+}
+
+
+.filter-button {
+  background-color: rgb(164, 85, 164)
+}
+
+.add-button {
+  background-color: #28a745;
+  color: white;
+}
+
+

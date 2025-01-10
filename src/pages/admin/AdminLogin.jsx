@@ -1,5 +1,5 @@
 import { useState } from "react";
-import "./../../assets/admin/styles/AdminLogin.css";
+import "./../../assets/styles/AdminLogin.css";
 
 const AdminLogin = () => {
   const [isPhone, setIsPhone] = useState(true);
@@ -8,7 +8,7 @@ const AdminLogin = () => {
     <div className="admin-login-container">
       <div className="admin-login-image">
         <img
-          src="/src/assets/admin/images/admin-log.png"
+          src="/src/assets/images/admin-log.png"
           alt="Landscape"
           className="background-image"
         />
@@ -16,7 +16,7 @@ const AdminLogin = () => {
       <div className="admin-login-form">
         <h1>Find Your Pusta</h1>
         <form>
-          <label htmlFor="phoneOrEmail">Phone Number</label>
+          <label htmlFor="phoneOrEmail">{isPhone ? "Phone Number" : "Email Address"}</label>
           <input
             type={isPhone ? "tel" : "email"}
             id="phoneOrEmail"
