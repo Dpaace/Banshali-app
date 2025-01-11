@@ -22,7 +22,7 @@ const AdminLogin = () => {
             id="phoneOrEmail"
             placeholder={isPhone ? "Enter your Phone Number" : "Enter your Email Address"}
           />
-          <div className="toggle-options">
+          <div className="toggle-options" >
             <label>
               <input
                 type="radio"

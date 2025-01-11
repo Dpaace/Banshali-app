@@ -8,7 +8,7 @@ const CardView = () => {
   const [startX, setStartX] = useState(0);
   const [touchStartX, setTouchStartX] = useState(0); // For touch events
   const [touchMoveX, setTouchMoveX] = useState(0); // For touch events
-  const isCooldown = useRef(false); // Cooldown for scroll and drag
+  const isCooldown = useRef(false); 
 
   // Handle wheel scrolling
   const handleWheel = (e) => {
