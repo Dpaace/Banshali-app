@@ -4,7 +4,7 @@ import AdminDashboard from "./pages/admin/AdminDashboard";
 
 const App = () => {
   return (
-    <Router>
+    <Router basename="/Banshali-app">
       <Routes>
         <Route path="/" element={<AdminLogin />} />
         <Route path="/admin" element={<AdminDashboard />} />
