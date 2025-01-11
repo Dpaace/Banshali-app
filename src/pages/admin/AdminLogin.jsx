@@ -1,4 +1,5 @@
 import { useState } from "react";
+import login_img from '/src/assets/public/admin-log.png';
 import "./../../assets/styles/AdminLogin.css";
 
 const AdminLogin = () => {
@@ -8,7 +9,7 @@ const AdminLogin = () => {
     <div className="admin-login-container">
       <div className="admin-login-image">
         <img
-          src="/src/assets/images/admin-log.png"
+          src={login_img}
           alt="Landscape"
           className="background-image"
         />

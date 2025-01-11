@@ -2,6 +2,8 @@
 import "../assets/styles/AdminDashboard.css";
 import PropTypes from 'prop-types';
 
+import sample1 from '/src/assets/public/sample_1.jpg';
+
 import { FaBell } from "react-icons/fa";
 
 const Header = ({ view, setView }) => {
@@ -15,7 +17,7 @@ const Header = ({ view, setView }) => {
         {/* Profile Image */}
         <img
           className="profile-image"
-          src="/src/assets/images/sample_1.jpg"
+          src={sample1}
           alt="Profile"
         />
 
