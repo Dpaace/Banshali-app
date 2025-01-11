@@ -1,42 +1,3 @@
-// import { useState } from "react";
-// import Sidebar from "../../components/Sidebar";
-// import Header from "../../components/Header";
-// import TableView from "../../components/TableView";
-// import CardView from "../../components/CardView";
-// import "./../../assets/styles/AdminDashboard.css";
-
-// // const AdminDashboard = () => {
-// //   return (
-// //     <div className="admin-dashboard">
-// //       <Sidebar />
-// //       <div className="admin-dashboard-content">
-// //         <Header />
-// //         <TableView />
-// //       </div>
-// //     </div>
-// //   );
-// // };
-
-
-// const AdminDashboard = () => {
-//   const [view, setView] = useState("Card View"); // Default to Table View
-
-//   return (
-//     <div className="admin-dashboard">
-//       <Sidebar />
-//       <div className="admin-dashboard-content">
-//         <Header view={view} setView={setView} /> {/* Pass state as props */}
-//         <div className="dashboard-view">
-//           {view === "Table View" ? <TableView /> : <CardView />}
-//         </div>
-//       </div>
-//     </div>
-//   );
-// };
-
-// export default AdminDashboard;
-
-
 import { useState, useEffect } from "react";
 import Sidebar from "../../components/Sidebar";
 import Header from "../../components/Header";
@@ -53,19 +14,20 @@ const AdminDashboard = () => {
     const handleResize = () => {
       setIsMobile(window.innerWidth <= 768);
       if (window.innerWidth <= 768) {
-        setView("Card View"); // Force Card View on mobile
+        setView("Card View");
       }
     };
 
-    window.addEventListener("resize", handleResize); // Add resize listener
+    window.addEventListener("resize", handleResize); 
     return () => {
-      window.removeEventListener("resize", handleResize); // Cleanup listener
+      window.removeEventListener("resize", handleResize);
     };
   }, []);
 
   return (
     <div className="admin-dashboard">
-      {!isMobile && <Sidebar />} {/* Show Sidebar only for non-mobile views */}
+      {/* Show Sidebar only for non-mobile views */}
+      {!isMobile && <Sidebar />} 
       <div className="admin-dashboard-content">
         <Header view={view} setView={setView} /> {/* Pass state as props */}
         {/* <div className="dashboard-view">

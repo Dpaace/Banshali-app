@@ -1,10 +1,9 @@
-/* Overall container */
+/* Desktop Design */
 .admin-login-container {
     display: flex;
     height: 100vh;
 }
 
-/* Left-side image */
 .admin-login-image {
     flex: 1;
     overflow: hidden;
@@ -16,7 +15,6 @@
     object-fit: cover;
 }
 
-/* Right-side form */
 .admin-login-form {
     flex: 1;
     padding: 2rem;
@@ -46,7 +44,7 @@ form label {
 }
 
 form input {
-    width: 100%;
+    width: 400px;
     padding: 0.8rem;
     font-size: 1rem;
     margin-bottom: 1rem;
@@ -73,7 +71,7 @@ form input {
 }
 
 .submit-button {
-    width: 100%;
+    width: 430px;
     padding: 0.8rem;
     font-size: 1rem;
     color: white;
@@ -101,4 +99,54 @@ p a {
 
 p a:hover {
     text-decoration: underline;
+}
+
+/* Mobile View: For screens smaller than 768px */
+@media (max-width: 768px) {
+    .admin-login-container {
+        flex-direction: column;
+        height: auto;
+        align-items: center;
+    }
+
+    .admin-login-image {
+        width: 100%;
+        height: 200px;
+        overflow: hidden;
+    }
+
+    .background-image {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+    }
+
+    .admin-login-form {
+        width: 90%;
+        max-width: 400px;
+        padding: 1rem;
+        margin-top: 1rem;
+    }
+
+    .admin-login-form h1 {
+        font-size: 1.8rem;
+        text-align: center;
+    }
+
+    form input {
+        width: 88%;
+        padding: 0.7rem;
+        font-size: 0.9rem;
+    }
+
+    .submit-button {
+        width: 95%;
+        padding: 0.7rem;
+        font-size: 1rem;
+    }
+
+    p {
+        font-size: 0.9rem;
+        text-align: center;
+    }
 }
