@@ -72,6 +72,7 @@ export const globalData = [
         father: "Tony Stark",
         gender: "M",
         dob: "5/27/15",
+        pustaNumber: 1,
     },
     {
         profile_image: sample2,
@@ -81,6 +82,7 @@ export const globalData = [
         father: "Tony Stark",
         gender: "M",
         dob: "5/27/15",
+        pustaNumber: 2,
     },
     {
         profile_image: sample3,
@@ -90,6 +92,7 @@ export const globalData = [
         father: "Tony Stark",
         gender: "M",
         dob: "5/27/15",
+        pustaNumber: 3,
     },
     {
         profile_image: sample4,
@@ -99,6 +102,7 @@ export const globalData = [
         father: "Tony Stark",
         gender: "M",
         dob: "5/27/15",
+        pustaNumber: 4,
     },
     {
         profile_image: sample5,
@@ -108,6 +112,7 @@ export const globalData = [
         father: "Tony Stark",
         gender: "M",
         dob: "5/27/15",
+        pustaNumber: 5,
     },
     {
         profile_image: sample6,
@@ -117,5 +122,6 @@ export const globalData = [
         father: "Tony Stark",
         gender: "M",
         dob: "5/27/15",
+        pustaNumber: 6,
     },
 ];
