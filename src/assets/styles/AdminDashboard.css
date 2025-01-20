@@ -111,10 +111,6 @@
   object-fit: cover;
 }
 
-.view-selector {
-  display: flex;
-  align-items: center;
-}
 
 .view-dropdown {
   padding: 0.5rem;

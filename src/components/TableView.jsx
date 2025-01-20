@@ -55,16 +55,16 @@ const TableView = () => {
             <tr key={index}>
               <td>
                 <img
-                  src={row.profile_image}
+                  src={row.photo_url}
                   alt="Profile"
                 />
                 {row.name}
               </td>
-              <td>{row.generation}</td>
-              <td>{row.mother}</td>
-              <td>{row.father}</td>
+              <td>Pusta {row.pusta_number}</td>
+              <td>{row.family_relations.mother}</td>
+              <td>{row.family_relations.father}</td>
               <td>{row.gender}</td>
-              <td>{row.dob}</td>
+              <td>{row.date_of_birth}</td>
               <td>
                 <button className="icon-button info-button">
                   <FaInfoCircle />

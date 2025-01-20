@@ -9,10 +9,10 @@ import { FaBell } from "react-icons/fa";
 const Header = ({ view, setView }) => {
   // const [view, setView] = useState("Card View");
   return (
-    <div className="header">
-      <div className="header-right">
+    <div className="flex justify-end items-center py-[1rem] px-4 lg:px-[10rem] border-[#ddd] border-b">
+      <div className=" flex items-center gap-1">
         {/* Notification Bell */}
-        <FaBell className="notification-icon" />
+        <FaBell className="w-6 h-6 lg:h-6 lg:w-6 p-[0.3rem] rounded-md border border-[#ccc] bg-[#f9f9f9]" />
 
         {/* Profile Image */}
         <img
@@ -22,7 +22,7 @@ const Header = ({ view, setView }) => {
         />
 
         {/* Dropdown Button */}
-        <div className="view-selector">
+        <div className="hidden lg:flex items-center">
           <select
             value={view}
             onChange={(e) => setView(e.target.value)}
