@@ -119,7 +119,7 @@ import sample4 from '/src/assets/public/sample_4.jpg';
 // import sample6 from '/src/assets/public/sample_6.jpg';
 
 export const globalData = [
-    {   
+    {
         "id": 1,
         "name": "Ram Bahadur Kafle",
         "name_in_nepali": "राम बहादुर काफ्ले",
