@@ -153,3 +153,18 @@
   background-color: #28a745;
   color: white;
 }
+
+
+/* AdminDashboard.css */
+.sidebar ul li {
+  cursor: pointer;
+  padding: 10px;
+}
+
+.sidebar ul li.active {
+  background-color: #4a2373;
+  color: white;
+  border-radius: 5px;
+}
+
+

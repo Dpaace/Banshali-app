@@ -1,126 +1,264 @@
-import PropTypes from 'prop-types';
-
+import PropTypes from "prop-types";
 
 const FamilyTreeModal = ({ familyData, onClose }) => {
-    if (!familyData) return null;
+  if (!familyData) return null;
 
-    const { name, name_in_nepali, pusta_number, contact_details, family_relations, date_of_birth, status, profession, gender, photo_url } = familyData;
+  const {
+    name,
+    name_in_nepali,
+    pusta_number,
+    contact_details,
+    family_relations,
+    date_of_birth,
+    status,
+    profession,
+    gender,
+    photo_url,
+  } = familyData;
 
-    return (
-        <div className="fixed inset-0 bg-black bg-opacity-50 flex justify-center items-center z-50">
-            <div className="bg-white w-11/12 max-w-3xl p-6 left-20 rounded-lg relative">
-                {/* Close Button */}
-                <button
-                    onClick={onClose}
-                    className="absolute top-2 right-2 text-gray-700 font-bold text-lg"
-                >
-                    &#x2715;
-                </button>
+  return (
+    <div className="fixed inset-0 bg-black bg-opacity-50 flex justify-center items-center z-50 px-4">
+      <div className="bg-white w-full max-w-3xl p-6 rounded-lg relative overflow-y-auto max-h-[90vh]">
+        {/* Close Button */}
+        <button
+          onClick={onClose}
+          className="absolute top-2 right-2 text-gray-700 font-bold text-lg"
+        >
+          &#x2715;
+        </button>
 
-                {/* Header */}
-                <div className="flex items-center gap-4 mb-6">
-                    <img
-                        src={photo_url}
-                        alt={name}
-                        className="w-16 h-16 rounded-full border-2 border-gray-300"
-                    />
-                    <div>
-                        <h2 className="text-xl font-bold">{name}</h2>
-                        <p className="text-sm text-gray-500">{name_in_nepali}</p>
-                    </div>
-                </div>
-
-                {/* Details Section */}
-                <div className="space-y-4">
-                    <p>
-                        <strong>Pusta Number:</strong> {pusta_number}
-                    </p>
-                    <p>
-                        <strong>Profession:</strong> {profession}
-                    </p>
-                    <p>
-                        <strong>Gender:</strong> {gender}
-                    </p>
-                    <p>
-                        <strong>Date of Birth:</strong> {date_of_birth}
-                    </p>
-                    <p>
-                        <strong>Status:</strong> {status}
-                    </p>
-
-                    {/* Contact Details */}
-                    <div>
-                        <h3 className="text-lg font-semibold mb-2">Contact Details</h3>
-                        <p>
-                            <strong>Email:</strong> {contact_details.email}
-                        </p>
-                        <p>
-                            <strong>Phone:</strong>{" "}
-                            {contact_details.phone_numbers.join(", ")}
-                        </p>
-                        <p>
-                            <strong>Address:</strong> {`${contact_details.current_address.street}, ${contact_details.current_address.city}, ${contact_details.current_address.country}`}
-                        </p>
-                        {contact_details.social_links.length > 0 && (
-                            <p>
-                                <strong>Social Links:</strong>{" "}
-                                <a
-                                    href={contact_details.social_links[0]}
-                                    className="text-blue-500 underline"
-                                    target="_blank"
-                                    rel="noopener noreferrer"
-                                >
-                                    Facebook
-                                </a>
-                            </p>
-                        )}
-                    </div>
-
-                    {/* Family Relations */}
-                    <div>
-                        <h3 className="text-lg font-semibold mb-2">Family Relations</h3>
-                        <p>
-                            <strong>Father:</strong> {family_relations.father}
-                        </p>
-                        <p>
-                            <strong>Mother:</strong> {family_relations.mother}
-                        </p>
-                    </div>
-                </div>
-            </div>
+        {/* Header */}
+        <div className="flex flex-col md:flex-row items-center gap-4 mb-6">
+          <img
+            src={photo_url}
+            alt={name}
+            className="w-16 h-16 rounded-full border-2 border-gray-300"
+          />
+          <div className="text-center md:text-left">
+            <h2 className="text-xl font-bold">{name}</h2>
+            <p className="text-sm text-gray-500">{name_in_nepali}</p>
+          </div>
         </div>
-    );
+
+        {/* Details Section */}
+        <div className="space-y-4 text-sm md:text-base">
+          <p>
+            <strong>Pusta Number:</strong> {pusta_number}
+          </p>
+          <p>
+            <strong>Profession:</strong> {profession}
+          </p>
+          <p>
+            <strong>Gender:</strong> {gender}
+          </p>
+          <p>
+            <strong>Date of Birth:</strong> {date_of_birth}
+          </p>
+          <p>
+            <strong>Status:</strong> {status}
+          </p>
+
+          {/* Contact Details */}
+          <div>
+            <h3 className="text-lg font-semibold mb-2">Contact Details</h3>
+            <p>
+              <strong>Email:</strong> {contact_details.email}
+            </p>
+            <p>
+              <strong>Phone:</strong>{" "}
+              {contact_details.phone_numbers.join(", ")}
+            </p>
+            <p>
+              <strong>Address:</strong>{" "}
+              {`${contact_details.current_address.street}, ${contact_details.current_address.city}, ${contact_details.current_address.country}`}
+            </p>
+            {contact_details.social_links.length > 0 && (
+              <p>
+                <strong>Social Links:</strong>{" "}
+                <a
+                  href={contact_details.social_links[0]}
+                  className="text-blue-500 underline"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  Facebook
+                </a>
+              </p>
+            )}
+          </div>
+
+          {/* Family Relations */}
+          <div>
+            <h3 className="text-lg font-semibold mb-2">Family Relations</h3>
+            <p>
+              <strong>Father:</strong> {family_relations.father}
+            </p>
+            <p>
+              <strong>Mother:</strong> {family_relations.mother}
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  );
 };
 
 FamilyTreeModal.propTypes = {
-    familyData: PropTypes.shape({
-        name: PropTypes.string.isRequired,
-        name_in_nepali: PropTypes.string,
-        pusta_number: PropTypes.string,
-        contact_details: PropTypes.shape({
-            email: PropTypes.string,
-            phone_numbers: PropTypes.arrayOf(PropTypes.string),
-            current_address: PropTypes.shape({
-                street: PropTypes.string,
-                city: PropTypes.string,
-                country: PropTypes.string,
-            }),
-            social_links: PropTypes.arrayOf(PropTypes.string),
-        }),
-        family_relations: PropTypes.shape({
-            father: PropTypes.string,
-            mother: PropTypes.string,
-        }),
-        date_of_birth: PropTypes.string,
-        status: PropTypes.string,
-        profession: PropTypes.string,
-        gender: PropTypes.string,
-        photo_url: PropTypes.string,
-    }).isRequired,
-    onClose: PropTypes.func.isRequired,
+  familyData: PropTypes.shape({
+    name: PropTypes.string.isRequired,
+    name_in_nepali: PropTypes.string,
+    pusta_number: PropTypes.string,
+    contact_details: PropTypes.shape({
+      email: PropTypes.string,
+      phone_numbers: PropTypes.arrayOf(PropTypes.string),
+      current_address: PropTypes.shape({
+        street: PropTypes.string,
+        city: PropTypes.string,
+        country: PropTypes.string,
+      }),
+      social_links: PropTypes.arrayOf(PropTypes.string),
+    }),
+    family_relations: PropTypes.shape({
+      father: PropTypes.string,
+      mother: PropTypes.string,
+    }),
+    date_of_birth: PropTypes.string,
+    status: PropTypes.string,
+    profession: PropTypes.string,
+    gender: PropTypes.string,
+    photo_url: PropTypes.string,
+  }).isRequired,
+  onClose: PropTypes.func.isRequired,
 };
 
 export default FamilyTreeModal;
+
+
+
+
+// import PropTypes from 'prop-types';
+
+
+// const FamilyTreeModal = ({ familyData, onClose }) => {
+//     if (!familyData) return null;
+
+//     const { name, name_in_nepali, pusta_number, contact_details, family_relations, date_of_birth, status, profession, gender, photo_url } = familyData;
+
+//     return (
+//         <div className="fixed inset-0 bg-black bg-opacity-50 flex justify-center items-center z-50">
+//             <div className="bg-white w-11/12 max-w-3xl p-6 left-20 rounded-lg relative">
+//                 {/* Close Button */}
+//                 <button
+//                     onClick={onClose}
+//                     className="absolute top-2 right-2 text-gray-700 font-bold text-lg"
+//                 >
+//                     &#x2715;
+//                 </button>
+
+//                 {/* Header */}
+//                 <div className="flex items-center gap-4 mb-6">
+//                     <img
+//                         src={photo_url}
+//                         alt={name}
+//                         className="w-16 h-16 rounded-full border-2 border-gray-300"
+//                     />
+//                     <div>
+//                         <h2 className="text-xl font-bold">{name}</h2>
+//                         <p className="text-sm text-gray-500">{name_in_nepali}</p>
+//                     </div>
+//                 </div>
+
+//                 {/* Details Section */}
+//                 <div className="space-y-4">
+//                     <p>
+//                         <strong>Pusta Number:</strong> {pusta_number}
+//                     </p>
+//                     <p>
+//                         <strong>Profession:</strong> {profession}
+//                     </p>
+//                     <p>
+//                         <strong>Gender:</strong> {gender}
+//                     </p>
+//                     <p>
+//                         <strong>Date of Birth:</strong> {date_of_birth}
+//                     </p>
+//                     <p>
+//                         <strong>Status:</strong> {status}
+//                     </p>
+
+//                     {/* Contact Details */}
+//                     <div>
+//                         <h3 className="text-lg font-semibold mb-2">Contact Details</h3>
+//                         <p>
+//                             <strong>Email:</strong> {contact_details.email}
+//                         </p>
+//                         <p>
+//                             <strong>Phone:</strong>{" "}
+//                             {contact_details.phone_numbers.join(", ")}
+//                         </p>
+//                         <p>
+//                             <strong>Address:</strong> {`${contact_details.current_address.street}, ${contact_details.current_address.city}, ${contact_details.current_address.country}`}
+//                         </p>
+//                         {contact_details.social_links.length > 0 && (
+//                             <p>
+//                                 <strong>Social Links:</strong>{" "}
+//                                 <a
+//                                     href={contact_details.social_links[0]}
+//                                     className="text-blue-500 underline"
+//                                     target="_blank"
+//                                     rel="noopener noreferrer"
+//                                 >
+//                                     Facebook
+//                                 </a>
+//                             </p>
+//                         )}
+//                     </div>
+
+//                     {/* Family Relations */}
+//                     <div>
+//                         <h3 className="text-lg font-semibold mb-2">Family Relations</h3>
+//                         <p>
+//                             <strong>Father:</strong> {family_relations.father}
+//                         </p>
+//                         <p>
+//                             <strong>Mother:</strong> {family_relations.mother}
+//                         </p>
+//                     </div>
+//                 </div>
+//             </div>
+//         </div>
+//     );
+// };
+
+// FamilyTreeModal.propTypes = {
+//     familyData: PropTypes.shape({
+//         name: PropTypes.string.isRequired,
+//         name_in_nepali: PropTypes.string,
+//         pusta_number: PropTypes.string,
+//         contact_details: PropTypes.shape({
+//             email: PropTypes.string,
+//             phone_numbers: PropTypes.arrayOf(PropTypes.string),
+//             current_address: PropTypes.shape({
+//                 street: PropTypes.string,
+//                 city: PropTypes.string,
+//                 country: PropTypes.string,
+//             }),
+//             social_links: PropTypes.arrayOf(PropTypes.string),
+//         }),
+//         family_relations: PropTypes.shape({
+//             father: PropTypes.string,
+//             mother: PropTypes.string,
+//         }),
+//         date_of_birth: PropTypes.string,
+//         status: PropTypes.string,
+//         profession: PropTypes.string,
+//         gender: PropTypes.string,
+//         photo_url: PropTypes.string,
+//     }).isRequired,
+//     onClose: PropTypes.func.isRequired,
+// };
+
+// export default FamilyTreeModal;
 
 
 ///// Second Working 
