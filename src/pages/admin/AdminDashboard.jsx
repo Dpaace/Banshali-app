@@ -7,7 +7,7 @@ import Compare from "../../components/Compare"; // Import Compare Component
 import "./../../assets/styles/AdminDashboard.css";
 
 const AdminDashboard = () => {
-  const [view, setView] = useState("Table View"); // Default view
+  const [view, setView] = useState("Card View"); // Default view
   const [isMobile, setIsMobile] = useState(window.innerWidth <= 768); // Check if screen is mobile
 
   useEffect(() => {
