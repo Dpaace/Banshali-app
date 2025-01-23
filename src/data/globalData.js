@@ -139,11 +139,11 @@ export const globalData = [
             "mother": "Gita Devi Kafle"
         },
         "date_of_birth": "1980-01-15",
-        "status": "Alive",
+        "status": "Dead",
         "date_of_death": null,
         "photo_url": sample1,
         "profession": "Teacher",
-        "gender": "Male",
+        "gender": "Female",
         "same_vamsha_status": true
     },
     {
