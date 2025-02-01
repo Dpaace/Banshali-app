@@ -18,6 +18,7 @@ const Sidebar = ({ setView, currentView }) => {
         >
           Compare
         </li>
+        
       </ul>
     </div>
   );

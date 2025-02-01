@@ -22,8 +22,6 @@ const CardView = () => {
     }
   };
 
-
-
   return (
     <div className="relative w-full h-full lg:w-2/5 lg:h-[90%] overflow-hidden">
       {/* Navigation Buttons */}
