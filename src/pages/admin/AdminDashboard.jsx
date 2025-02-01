@@ -3,7 +3,7 @@ import Sidebar from "../../components/Sidebar";
 import Header from "../../components/Header";
 import TableView from "../../components/TableView";
 import CardView from "../../components/CardView";
-import Compare from "../../components/Compare"; // Import Compare Component
+import Compare from "../../components/Compare";
 import "./../../assets/styles/AdminDashboard.css";
 
 const AdminDashboard = () => {
